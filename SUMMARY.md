@@ -2,7 +2,7 @@
 
 * [Estrutura de Dados](README.md)
 
-## Vetores e matrizes
+## 1. Vetores e matrizes <a id="vetores-e-matrizes"></a>
 
 * [Roteiro](vetores-e-matrizes/vetores-e-matrizes-roteiro.md)
 * [Vetores](vetores-e-matrizes/vetores.md)
