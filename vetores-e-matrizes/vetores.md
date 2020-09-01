@@ -145,7 +145,7 @@ for indice, nome in enumerate(lista):
 
 Este código percorre o vetor e a cada volta ele compara se o valor é Carlos e, se for, ele escreve no console uma mensagem informando o índice em que ele se encontra. Caso não exista, nada será escrito no console.
 
-#### Exercícios
+### Exercícios
 
 [Lista de exercícios - Vetores](https://colab.research.google.com/drive/1C_K-2uDikeSlguChyE10HNMBILl6i1_j)
 
