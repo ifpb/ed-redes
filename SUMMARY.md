@@ -1,8 +1,10 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Estrutura de Dados](README.md)
 
-## Teste
+## Vetores e matrizes
 
-* [nova página](teste/nova-pagina.md)
+* [Roteiro](vetores-e-matrizes/vetores-e-matrizes-roteiro.md)
+* [Vetores](vetores-e-matrizes/vetores.md)
+* [Listas de Exercícios](vetores-e-matrizes/lista-de-exercicios.md)
 
