@@ -147,5 +147,5 @@ Este código percorre o vetor e a cada volta ele compara se o valor é Carlos e
 
 ### Exercícios
 
-[Lista de exercícios - Vetores](https://colab.research.google.com/drive/1C_K-2uDikeSlguChyE10HNMBILl6i1_j)
+[Lista de exercícios - Vetores](https://colab.research.google.com/drive/1C_K-2uDikeSlguChyE10HNMBILl6i1_j?usp=sharing)
 

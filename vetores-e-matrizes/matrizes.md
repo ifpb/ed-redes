@@ -66,5 +66,5 @@ O resultado dessa execução seria o mesmo do trecho anterior \(que utiliza rang
 
 ### Exercícios
 
-
+[Lista de Exercícios - Matrizes](https://colab.research.google.com/drive/12QwTKkXhxNh0Nl7_VNQ5C6bqBWETCsb1?usp=sharing)
 
