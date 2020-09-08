@@ -9,11 +9,16 @@
 * [Matrizes](vetores-e-matrizes/matrizes.md)
 * [Listas de Exercícios](vetores-e-matrizes/vetores-matrizes-lista-de-exercicios.md)
 
-## 2. Pilhas
+## 2. Listas lineares <a id="2-listas-lineares"></a>
 
-* [Roteiro](2.-pilhas/roteiro.md)
-* [Visão Geral](2.-pilhas/visao-geral.md)
-* [Operações](2.-pilhas/operacoes/README.md)
-  * [Criação de Pilhas](2.-pilhas/operacoes/criacao-de-pilhas.md)
-* [Untitled](2.-pilhas/untitled.md)
+* [Roteiro](2-listas-lineares/roteiro.md)
+* [Lista Encadeada Simples](2-listas-lineares/lista-encadeada-simples.md)
+
+## 3. Pilhas
+
+* [Roteiro](3.-pilhas/roteiro.md)
+* [Visão Geral](3.-pilhas/visao-geral.md)
+* [Operações](3.-pilhas/operacoes/README.md)
+  * [Criação de Pilhas](3.-pilhas/operacoes/criacao-de-pilhas.md)
+* [Untitled](3.-pilhas/untitled.md)
 
