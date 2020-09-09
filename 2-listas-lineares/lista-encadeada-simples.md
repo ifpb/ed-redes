@@ -96,7 +96,7 @@ Para inserir um elemento no início da lista, é preciso alterar a cabeça da li
 ```text
     def inserir_valor_no_inicio(self, valor):
         novo = No(valor)
-        if self.cabeca == None:
+        if self.cabeca is None:
             self.cabeca = self.cauda = novo
         else:
             novo.prox = self.cabeca
@@ -121,7 +121,7 @@ Para inserir no final, é preciso acessar o último elemento da lista \(cauda\) 
 ```text
     def inserir_valor_no_final(self, valor):
         novo = No(valor)
-        if self.cabeca == None:
+        if self.cabeca is None:
             self.cabeca = self.cauda = novo
         else:
             self.cauda.prox = novo
@@ -143,7 +143,7 @@ A lista possui os nós  n1 como cabeça e n4 como cauda. Como conhecemos o inici
 ```text
     def imprime_lista(self):
         atual = None
-        if self.cabeca == None:
+        if self.cabeca is None:
             print("Lista vazia")
             return
         
@@ -155,11 +155,44 @@ A lista possui os nós  n1 como cabeça e n4 como cauda. Como conhecemos o inici
 
 ### Remover elemento do início
 
+Para remover um elemento do início da lista, basta modificar o apontador da cabeça para passar a referenciar o próximo elemento \(o segundo\). Caso a lista tenha apenas um elemento \(ou seja, a cabeça é igual à cauda\), este elemento deverá ser removido \(atribuído a None\). Caso a lista esteja vazia, nada deverá ser feito.
 
+![](https://documents.app.lucidchart.com/documents/7d076ce8-dc0b-4063-b982-fe8d34cbf2d4/pages/0_0?a=901&x=220&y=2327&w=1257&h=292&store=1&accept=image%2F*&auth=LCA%20c89314d2a972c738e3e94d7230b0bd518f654edd-ts%3D1599616615)
+
+```text
+    def remove_do_inicio(self):
+        if self.cabeca is None:
+            print("Lista vazia")
+            return
+        
+        if self.cabeca == self.cauda:
+            self.cabeca = self.cauda = None
+        else:
+            self.cabeca = self.cabeca.prox
+```
 
 ### Remover elemento do final
 
+Para remover um elemento do final da lista é preciso percorrer todos os seus elementos e fazer com que o penúltimo elemento seja referenciado como pela lista como cauda e tenha como próximo `None` ao invés do último elemento. Caso a lista tenha apenas um elemento o funcionamento será similar à remoção do início \(o único elemento existente deverá ser atribuído a `None`\) e da mesma forma caso a lista esteja vazia, nada deverá ser feito. 
 
+![](../.gitbook/assets/image%20%2822%29.png)
+
+```text
+    def remove_do_final(self):
+        if self.cabeca is None:
+            print("Lista vazia")
+            return
+        
+        if self.cabeca == self.cauda:
+            self.cabeca = self.cauda = None
+        else:
+            atual: 'No' = self.cabeca
+            while atual.prox is not self.cauda:
+                atual = atual.prox
+
+            self.cauda = atual
+            atual.prox = None
+```
 
 ### Exemplos e Exercícios
 
