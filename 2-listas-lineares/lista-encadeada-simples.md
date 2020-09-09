@@ -196,5 +196,8 @@ Para remover um elemento do final da lista é preciso percorrer todos os seus el
 
 ### Exemplos e Exercícios
 
-* [Exemplos e exercícios](https://colab.research.google.com/drive/1fAtHIKKEf6yZFQmVCeTNDrS7tE7P3DCl?usp=sharing)
+* [Exemplos](https://colab.research.google.com/drive/1fAtHIKKEf6yZFQmVCeTNDrS7tE7P3DCl)
+* [Exercício 1 - Implementação de uma lista encadeada em Python](https://colab.research.google.com/drive/1UWKReYq0novKHPipLgz6LOp9m-Bgpdno#scrollTo=gCrnSj_7KS1a)
+
+
 
