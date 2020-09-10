@@ -142,14 +142,13 @@ A lista possui os nós  n1 como cabeça e n4 como cauda. Como conhecemos o inici
 
 ```text
     def imprime_lista(self):
-        atual = None
         if self.cabeca is None:
-            print("Lista vazia")
+            print("Lista Vazia")
             return
-        
-        atual = self.cabeca
-        while atual != None:
-            print(atual.carga + " ")
+            
+        atual: 'No' = self.cabeca
+        while atual is not None:
+            print(str(atual.carga) + " ")
             atual = atual.prox
 ```
 
