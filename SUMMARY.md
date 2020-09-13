@@ -13,6 +13,7 @@
 
 * [Roteiro](2-listas-lineares/roteiro.md)
 * [Lista Encadeada Simples](2-listas-lineares/lista-encadeada-simples.md)
+* [Lista Duplamente Encadeada](2-listas-lineares/lista-duplamente-encadeada.md)
 
 ## 3. Pilhas
 
