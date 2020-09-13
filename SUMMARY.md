@@ -21,5 +21,8 @@
 * [Visão Geral](3.-pilhas/visao-geral.md)
 * [Operações](3.-pilhas/operacoes/README.md)
   * [Criação de Pilhas](3.-pilhas/operacoes/criacao-de-pilhas.md)
-* [Untitled](3.-pilhas/untitled.md)
+  * [Inserção de elementos](3.-pilhas/operacoes/insercao-de-elementos.md)
+  * [Remoção de elementos](3.-pilhas/operacoes/remocao-de-elementos.md)
+  * [Impressão, topo e tamanho da pilha](3.-pilhas/operacoes/impressao-topo-e-tamanho-da-pilha.md)
+* [Exemplo](3.-pilhas/untitled.md)
 
