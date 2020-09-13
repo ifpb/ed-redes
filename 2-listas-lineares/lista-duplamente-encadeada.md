@@ -138,7 +138,95 @@ Agora que temos o ponteiro que aponta para o nó anterior \(`ant`\), torna-se be
             atual = atual.ant # a cada iteração, atribui atual ao seu anterior
 ```
 
-### Exemplos
+## Lista Circular
 
-* [Notebook com exemplos da implementação de uma lista duplamente encadeada](https://colab.research.google.com/drive/1sRuNNuolb8BHnC4L67QmevtmvIf5Ytip#scrollTo=e26WQKULmnxZ) 
+A lista circular é uma variação da lista duplamente encadeada, em o ponteiro `prox` do último elemento aponta para o primeiro elemento da lista \(cabeça\) e o ponteiro `ant` do primeiro elemento aponta para o último elemento da lista \(cauda\), formando um círculo.
+
+### Percorrer a lista
+
+Uma atenção especial deve ser dada ao percorrer esse tipo de lista. Caso seja utilizada a mesma lógica da lista encadeada simples \(percorrer até achar um nó que seja `None`\), haverá uma execução infinita desse método, já que não há mais apontadores `None` em nenhuma parte da lista. Para resolver esse problema, a lista deve ser percorrida até encontrar a sua cauda. Exemplo:
+
+```text
+   def imprimir_lista(self):
+        if self.cabeca is None:
+            print("Lista vazia")
+            return
+
+        atual: 'No' = self.cabeca
+        print(atual)
+        while atual is not self.cauda: # Note que agora precisamos varrer a lista até encontrar a cauda, já que não há mais nenhum apontador para None
+            print(atual.prox)
+            atual = atual.prox
+```
+
+### Inserir ou remover elementos
+
+Já o funcionamento dos métodos de inserção e remoção seguem a mesma lógica da lista encadeada não-circular. Apenas deve ser necessário trocar as referências de `None` para apontar para a cabeça e ou a cauda de acordo com a situação. Exemplos:
+
+#### Inserir no início:
+
+```text
+    def inserir_no_inicio(self, valor: object):
+        novo: 'No' = No(valor)
+        if self.cabeca is None:
+            self.cabeca = self.cauda = novo
+        else:        
+            novo.prox = self.cabeca
+            self.cabeca = novo
+            novo.prox.ant = novo
+            self.cabeca.ant = self.cauda ## adiciona referência para a cauda como anterior da cabeça
+            self.cauda.prox = self.cabeca ## atualiza referência do próximo da cauda para apontar para a nova cabeça
+
+```
+
+#### Inserir no final:
+
+```text
+  def inserir_no_final(self, valor):
+        novo: 'No' = No(valor)
+        if self.cabeca is None:
+            self.cabeca = self.cauda = novo
+        else:
+          novo.ant = self.cauda 
+          novo.ant.prox = novo 
+          self.cauda = novo 
+          self.cauda.prox = self.cabeca ## adiciona referência para a cabeça como próximo da cauda 
+          self.cabeca.ant = self.cauda ## atualiza referência do anterior da cabeça para apontar para a nova caud
+```
+
+#### Remover do início:
+
+```text
+    def remover_do_inicio(self):
+        if self.cabeca is None:
+            print("Lista vazia")
+            return
+        
+        if self.cabeca == self.cauda:
+            self.cabeca = self.cauda = None
+        else:
+            self.cabeca = self.cabeca.prox 
+            self.cabeca.ant = self.cauda # O anterior da nova cabeça agora passa a apontar para a cauda
+            self.cauda.prox = self.cabeca # O próximo da cauda passa a ser a nova cabeç
+```
+
+#### Remover do final:
+
+```text
+def remover_do_final(self):
+    if self.cabeca is None:
+        print("Lista vazia")
+        return
+
+    if self.cabeca == self.cauda:
+        self.cabeca = self.cauda = None
+    else:
+        self.cauda = self.cauda.ant
+        self.cauda.prox = self.cabeca # o próximo da nova cauda agora passa a pontar para a cabeça
+        self.cabeca.ant = self.cauda # o anterior da cabeça passa a ser a nova caud
+```
+
+## Exemplos
+
+* [Notebook com exemplos da implementação de uma lista duplamente encadeada e lista circular ](https://colab.research.google.com/drive/1sRuNNuolb8BHnC4L67QmevtmvIf5Ytip?usp=sharing)
 
