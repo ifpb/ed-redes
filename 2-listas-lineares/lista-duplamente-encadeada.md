@@ -2,7 +2,7 @@
 
 As listas duplamente encadeadas são uma extensão da lista encadeada ligada apresentada no item anterior.
 
-Uma lista duplamente encadeada é formada por um conjunto de nós composto normalmente por três elementos: uma variável que armazena a informação \(`carga`\), podendo ser objetos, números, caracteres etc. e dois ponteiros que possibilitam a ligação entre os nós anterior \(`anterior`\) e posterior  \(`próximo`\) desta lista.
+Uma lista duplamente encadeada é formada por um conjunto de nós composto normalmente por três elementos: uma variável que armazena a informação \(`carga`\), podendo ser objetos, números, caracteres etc., e dois ponteiros que possibilitam a ligação entre os nós anterior \(`anterior`\) e posterior  \(`próximo`\) desta lista.
 
 Assim, enquanto que em uma lista encadeada simples, cada nó conhece apenas o próximo nó, nas listas duplamente encadeadas, os nós conhecem também o seu antecessor, com exceção da cabeça, que aponta apenas para o seu sucessor e da cauda, que  aponta apenas para o seu antecessor.
 
