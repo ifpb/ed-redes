@@ -34,13 +34,86 @@ class Fila:
         return str(self.__dados)
 ```
 
-## Início da fila
+## Início e final da fila
 
-Outra operação importante, é a verificação do início da fila. Faremos isso por meio do método inicio:
+Outra operação importante, é a verificação do início da fila. Faremos isso por meio dos métodos **inicio** e **final**:
 
-## Final da fila
+```text
+class Fila:
+    def __init__(self):
+        print("__init__")
+        self.__dados = []
+    
+    def is_empty(self):
+        return len(self.__dados) == 0
 
+    def inserirDado(self,novoValor):
+        self.__dados.append(novoValor)
 
+    def remover(self):
+        self.__dados.pop(0)
+
+    def removerDado(self,valor):
+        pos = self.__dados.index(valor)
+        for i in range(0,pos+1):
+            self.__dados.pop(0)
+
+    def inicio(self):
+      if self.is_empty():
+        return ("Fila vazia")
+      else: 
+        return self.__dados[0]
+
+    def final(self):
+      if self.is_empty():
+        return ("Fila vazia")
+      else: 
+        return self.__dados[-1]
+
+    def __str__(self):
+        return str(self.__dados)
+```
 
 ## Tamanho da fila
+
+Por fim, um método para verificar o tamanho da estrutura:
+
+```text
+class Fila:
+    def __init__(self):
+        print("__init__")
+        self.__dados = []
+    
+    def is_empty(self):
+        return len(self.__dados) == 0
+
+    def inserirDado(self,novoValor):
+        self.__dados.append(novoValor)
+
+    def remover(self):
+        self.__dados.pop(0)
+
+    def removerDado(self,valor):
+        pos = self.__dados.index(valor)
+        for i in range(0,pos+1):
+            self.__dados.pop(0)
+
+    def inicio(self):
+      if self.is_empty():
+        return ("Fila vazia")
+      else: 
+        return self.__dados[0]
+
+    def final(self):
+      if self.is_empty():
+        return ("Fila vazia")
+      else: 
+        return self.__dados[-1]
+
+    def __str__(self):
+        return str(self.__dados)
+
+    def __len__(self):
+        return len(self.__dados)
+```
 
