@@ -26,3 +26,14 @@
   * [Impressão, topo e tamanho da pilha](3.-pilhas/operacoes/impressao-topo-e-tamanho-da-pilha.md)
 * [Exemplo](3.-pilhas/untitled.md)
 
+## 4. Filas
+
+* [Roteiro](4.-filas/roteiro.md)
+* [Visão Geral](4.-filas/visao-geral.md)
+* [Operações](4.-filas/operacoes/README.md)
+  * [Criação das Filas](4.-filas/operacoes/criacao-das-filas.md)
+  * [Inserção de Elementos](4.-filas/operacoes/insercao-de-elementos.md)
+  * [Remoção de Elementos](4.-filas/operacoes/remocao-de-elementos.md)
+  * [Impressão, inicio e final da fila](4.-filas/operacoes/impressao-inicio-e-final-da-fila.md)
+* [Exemplo](4.-filas/exemplo.md)
+
