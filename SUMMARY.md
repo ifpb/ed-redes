@@ -37,3 +37,9 @@
   * [Impressão, inicio e final da fila](4.-filas/operacoes/impressao-inicio-e-final-da-fila.md)
 * [Exemplo](4.-filas/exemplo.md)
 
+## 5. Algoritmos de Busca
+
+* [Roteiro](5.-algoritmos-de-busca/roteiro.md)
+* [Busca Sequencial](5.-algoritmos-de-busca/busca-sequencial.md)
+* [Busca Binária](5.-algoritmos-de-busca/busca-binaria.md)
+
