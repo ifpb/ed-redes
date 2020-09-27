@@ -39,7 +39,7 @@
 
 ## 5. Recursividade
 
-* [Roteiro](5.-recursividade/roteiro.md)
+* [Recursividade - Roteiro](5.-recursividade/roteiro.md)
 * [Visão geral](5.-recursividade/algoritmos-recursivos.md)
 * [Exemplos](5.-recursividade/exemplos/README.md)
   * [Execução do Algoritmo de Fibonacci Recursivo](5.-recursividade/exemplos/detalhes-algoritmo-de-fibonacci-recursivo.md)
