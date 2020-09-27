@@ -1,4 +1,4 @@
-# Algoritmos Recursivos
+# Visão geral
 
 ## Recursividade
 

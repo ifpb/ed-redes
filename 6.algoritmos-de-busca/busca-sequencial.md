@@ -52,25 +52,6 @@ def busca_sequencial(chave_pesquisa: int, vetor: List[int]):
   return -1
 ```
 
-### Recursividade
-
-Um algoritmo é denominado recursivo quando sua definição é parcialmente feita em termos dele mesmo. A idéia básica de um algoritmo recursivo consiste em diminuir sucessivamente o problema em um problema menor ou mais simples, até que o tamanho ou a simplicidade do problema reduzido permita resolvê-lo de forma direta, sem recorrer a si mesmo. Quando isso ocorre, diz-se que o algoritmo atingiu uma condição de parada, a qual deve estar presente em pelo menos um local dentro algoritmo. Sem esta condição o algoritmo não irá parar de chamar a si mesmo, até estourar a capacidade da pilha, o que geralmente causa efeitos colaterais e até mesmo o término indesejável do programa.
-
-Por exemplo, vamos fazer um algoritmo que imprima recursivamente todos os primeiros cinco números inteiros.
-
-```text
-def imprimir_numero_recursivo(num: int):
-  if num < 5:
-    print(num)
-    imprimir_numero_recursivo(num + 1)
-```
-
-Note que o método `imprimir_numero_recursivo`chama a si mesmo em parte da execução. A condição de parada neste caso é `num < 5` . Ou seja, a função for chamada com o parâmetro 5, o programa irá concluir a execução.
-
-
-
-![Ilustra&#xE7;&#xE3;o da Execu&#xE7;&#xE3;o do Exemplo](https://documents.app.lucidchart.com/documents/a4b39668-f3eb-4654-8a2b-b75e5ba2fd43/pages/0_0?a=206&x=18&y=135&w=924&h=550&store=1&accept=image%2F*&auth=LCA%20ad8c9d71b2223c68270ca1586790682983c8611b-ts%3D1601070739)
-
 ### Versão Recursiva do algoritmo de busca sequencial
 
 ```text
