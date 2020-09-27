@@ -40,8 +40,9 @@
 ## 5. Recursividade
 
 * [Roteiro](5.-recursividade/roteiro.md)
-* [Algoritmos Recursivos](5.-recursividade/algoritmos-recursivos/README.md)
-  * [Detalhes Algoritmo de Fibonacci Recursivo](5.-recursividade/algoritmos-recursivos/detalhes-algoritmo-de-fibonacci-recursivo.md)
+* [Algoritmos Recursivos](5.-recursividade/algoritmos-recursivos.md)
+* [Exemplos](5.-recursividade/exemplos/README.md)
+  * [Execução do Algoritmo de Fibonacci Recursivo](5.-recursividade/exemplos/detalhes-algoritmo-de-fibonacci-recursivo.md)
 
 ## 6. Algoritmos de Busca <a id="6.algoritmos-de-busca"></a>
 
