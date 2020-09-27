@@ -37,9 +37,15 @@
   * [Impressão, inicio e final da fila](4.-filas/operacoes/impressao-inicio-e-final-da-fila.md)
 * [Exemplo](4.-filas/exemplo.md)
 
-## 5. Algoritmos de Busca
+## 5. Recursividade
 
-* [Roteiro](5.-algoritmos-de-busca/roteiro.md)
-* [Busca Sequencial](5.-algoritmos-de-busca/busca-sequencial.md)
-* [Busca Binária](5.-algoritmos-de-busca/busca-binaria.md)
+* [Roteiro](5.-recursividade/roteiro.md)
+* [Algoritmos Recursivos](5.-recursividade/algoritmos-recursivos/README.md)
+  * [Detalhes Algoritmo de Fibonacci Recursivo](5.-recursividade/algoritmos-recursivos/detalhes-algoritmo-de-fibonacci-recursivo.md)
+
+## 6. Algoritmos de Busca <a id="6.algoritmos-de-busca"></a>
+
+* [Roteiro](6.algoritmos-de-busca/roteiro.md)
+* [Busca Sequencial](6.algoritmos-de-busca/busca-sequencial.md)
+* [Busca Binária](6.algoritmos-de-busca/busca-binaria.md)
 
