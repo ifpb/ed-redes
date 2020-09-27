@@ -49,4 +49,5 @@
 * [Roteiro](6.algoritmos-de-busca/roteiro.md)
 * [Busca Sequencial](6.algoritmos-de-busca/busca-sequencial.md)
 * [Busca Binária](6.algoritmos-de-busca/busca-binaria.md)
+* [Exemplos](6.algoritmos-de-busca/exemplos.md)
 

@@ -32,7 +32,7 @@ c\) Se a chave de pesquisa for maior que o elemento do meio, a chave de pesquisa
 
 Repare que a cada iteração, metade da lista é descartada, ficando apenas a metade que interessa. E assim sucessivamente até localizar o elemento ou reduzindo o subconjunto ao tamanho zero.
 
-O algoritmo retornará um índice \(posição de um elemento no vetor\) que corresponderá ao valor pesquisado ou um índice com um valor diferente ao pesquisado. 
+O algoritmo retornará um índice \(posição do elemento no vetor\) que corresponderá ao valor pesquisado ou um índice com um valor diferente ao pesquisado. 
 
 ```text
 def busca_binaria(chave: int, vetor: List[int]) -> int:
@@ -53,9 +53,29 @@ def busca_binaria(chave: int, vetor: List[int]) -> int:
   return -1
 ```
 
+### Versão Recursiva do algoritmo de busca binária
 
+Na versão recursiva é preciso adicionar como parâmetro da função o primeiro e o último elemento, que são utilizados nas chamadas internas recursivas. Para evitar a necessidade de passar esses dois parâmetros na chamada principal, assume-se como valor padrão `0` para o primeiro elemento e `None` para o último. Assim, a variável `ultimo` será inicializado com a posição do último elemento na lista. Esse valor será atualizado a cada chamada, de acordo com a fatia que será extraída.
 
-## 
+```text
+def busca_binaria_recursiva(vetor: List[int], chave: int, primeiro=0, ultimo=None) -> int:
+    
+  if not ultimo:
+    ultimo = len(vetor)-1
+
+  meio = (primeiro + ultimo) // 2 
+
+  if vetor[meio] == chave:
+    return meio
+
+  if meio == 0 or primeiro == ultimo: 
+    return -1
+  
+  if chave < vetor[meio]:
+    return busca_binaria_recursiva(vetor, chave, primeiro, meio)
+  else:
+    return busca_binaria_recursiva(vetor, chave, meio+1, ultimo)
+```
 
 ## Considerações
 
@@ -63,9 +83,7 @@ Obter a informação desejada no menor tempo possível é diferencial para a tom
 
 Vimos que, se os dados não estiverem ordenados de alguma maneira, não temos alternativas de pesquisa e temos que realizar uma pesquisa em cada um dos elementos para verificar sua existência ou ausência. 
 
-Foram, também, apresentados alguns algoritmos de pesquisa em conjunto de dados ordenados. A pesquisa sequencial visita os elementos, a partir do primeiro, um após o outro até encontrar a chave desejada, ou, se encontrar um valor maior que o pesquisado, interrompe a procura. 
-
-A pesquisa binária divide o conjunto de dados em duas partes e continua procurando pela chave na parte que potencialmente ela existiria. É eleita a metade da esquerda se a chave for menor que o elemento central, caso contrário, a metade da direita é escolhida. 
+Foram apresentados alguns algoritmos de pesquisa em conjunto de dados ordenados. A pesquisa sequencial visita os elementos, a partir do primeiro, um após o outro até encontrar a chave desejada, ou, se encontrar um valor maior que o pesquisado, interrompe a procura. A pesquisa binária divide o conjunto de dados em duas partes e continua procurando pela chave na parte que potencialmente ela existiria. É eleita a metade da esquerda se a chave for menor que o elemento central, caso contrário, a metade da direita é escolhida. 
 
 
 
