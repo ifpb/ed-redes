@@ -51,3 +51,11 @@
 * [Busca Binária](6.algoritmos-de-busca/busca-binaria.md)
 * [Exemplos](6.algoritmos-de-busca/exemplos.md)
 
+## 7. Algoritmos de Ordenação
+
+* [Roteiro](7.-algoritmos-de-ordenacao/roteiro.md)
+* [Ordenação](7.-algoritmos-de-ordenacao/ordenacao.md)
+* [Bubble Sort](7.-algoritmos-de-ordenacao/bubble-sort.md)
+* [Selection Sort](7.-algoritmos-de-ordenacao/selection-sort.md)
+* [Insertion Sort](7.-algoritmos-de-ordenacao/insertion-sort.md)
+
