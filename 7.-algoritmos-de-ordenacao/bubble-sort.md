@@ -27,18 +27,16 @@ No caso deste exemplo, apenas com duas rodadas foi possível ordenar completamen
 #### Implementação do Bubble Sort
 
 ```text
-def bubble_sort_alg(vetor):
+def bubble_sort(vetor: List[int]):
     trocou: bool = True
-    ultimo: int = len(vetor)-1
-    while ultimo > 0 and trocou:
+    while trocou:
         trocou = False
-        for i in range(atual):
+        for i in range(len(vetor)-1):
             if vetor[i] > vetor[i+1]:
-                trocou = True
                 aux = vetor[i]
                 vetor[i] = vetor[i+1]
                 vetor[i+1] = aux
-        ultimo -= 1
+                trocou = True
 ```
 
 Note que enquanto há trocas \(`trocou==true`\) o algoritmo continua iniciando uma nova rodada que irá varrer toda a lista em busca de trocar a posição dos pares de elementos que estão em ordem decrescente. Como o último elemento da lista sempre será o maior a cada rodada, pode-se retirá-lo da comparação para melhorar um pouco o tempo de execução. Para isso, usamos a variável `ultimo,`que recebe inicialmente como valor a posição do último elemento e é decrementada em menos 1 a cada rodada.
