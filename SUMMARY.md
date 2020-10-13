@@ -58,4 +58,6 @@
 * [Bubble Sort](7.-algoritmos-de-ordenacao/bubble-sort.md)
 * [Selection Sort](7.-algoritmos-de-ordenacao/selection-sort.md)
 * [Insertion Sort](7.-algoritmos-de-ordenacao/insertion-sort.md)
+* [Merge Sort](7.-algoritmos-de-ordenacao/merge-sort.md)
+* [Quicksort](7.-algoritmos-de-ordenacao/quicksort.md)
 
