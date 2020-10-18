@@ -61,3 +61,13 @@
 * [Merge Sort](7.-algoritmos-de-ordenacao/merge-sort.md)
 * [Quicksort](7.-algoritmos-de-ordenacao/quicksort.md)
 
+## 8. Árvores <a id="arvores"></a>
+
+* [Roteiro](arvores/roteiro.md)
+* [Introdução](arvores/introducao.md)
+* [Árvores Binárias](arvores/arvores-binarias.md)
+
+---
+
+* [Árvores Binárias de Busca](arvores-binarias-de-busca.md)
+
