@@ -77,7 +77,7 @@ b\) percorrer em pré-ordem a subárvore esquerda \(recursivamente\);
 c\) exibir a informação do nó;   
 d\) percorrer em pré-ordem a subárvore direita \(recursivamente\).
 
-![](../.gitbook/assets/arvore-inordem.png)
+![](../.gitbook/assets/arvore-inordem%20%281%29.png)
 
 ```text
   def in_ordem(self, no: 'No' = None):
@@ -97,7 +97,7 @@ b\) percorrer em pré-ordem a subárvore esquerda \(recursivamente\);
 c\) percorrer em pré-ordem a subárvore direita \(recursivamente\); e   
 d\) exibir a informação do nó.
 
-![](../.gitbook/assets/arvore-posordem.png)
+![](../.gitbook/assets/arvore-posordem%20%281%29.png)
 
 ```text
   def pos_ordem(self, no: 'No' = None):
