@@ -70,4 +70,5 @@
 ---
 
 * [Árvores Binárias de Busca](arvores-binarias-de-busca.md)
+* [Árvores AVL](arvores-avl.md)
 
