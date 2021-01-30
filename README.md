@@ -6,6 +6,6 @@ Dúvidas sobre o conteúdo? Entre em contato através do [chat da disciplina](ht
 
 O conteúdo da disciplina é organizado em duas partes:
 
-* [Estrutura de Dados](estrutura-de-dados.md)
-* [Programação Orientada a Objetos](programacao-orientada-a-objetos.md)
+* [Estrutura de Dados]()
+* [Programação Orientada a Objetos]()
 
