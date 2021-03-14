@@ -10,63 +10,27 @@ A Figura a seguir ilustra como deve ser o armazenamento dos novos dados em uma p
 
 ![Inser&#xE7;&#xE3;o Pilha](../../../.gitbook/assets/captura-de-tela-2020-09-13-a-s-13.46.32.png)
 
-Em código, para adicionarmos um novo elemento devemos adicionar elementos na lista que foi inicializada na pilha. Para isto, criaremos uma função denominada PUSH que recebe como parâmetro o elemento que precisa ser adicionado à pilha. 
+Em código, para adicionarmos um novo elemento devemos adicionar elementos na lista que foi inicializada na pilha. Para isto, criaremos uma função denominada PUSH que recebe como parâmetro o elemento que precisa ser adicionado à pilha. A lógica para inserção é a mesma utilizada para inserir no início em listas encadeadas. O novo nó deve apontar para o topo atual como próximo e em seguida se tornará o topo.
 
 ```text
 class Pilha:
     def __init__(self):
-        self.__dados = []
+        self.topo = None
 
     #retorna True se for vazia
     def is_empty(self):
-      return len(self.__dados) == 0
+      return self.cabeca == None
       
     def push(self, novoElem): 
-        self.__dados.append(novoElem)
+        novo = No(novoElem)
+        novo.prox = self.topo
+        self.topo = novo
 ```
 
 Como devemos testar?
 
-1\) Se usarmos um único .py
-
-```text
-class Pilha:
-    def __init__(self):
-        self.__dados = []
-        
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
-    
-    def push(self, novoElem): 
-        self.__dados.append(novoElem)
-
-def main():
-    pilhaTeste = Pilha()
-    pilha.push("elemento 1)
-
-main()
-```
-
-2\) Para arquivos .py diferentes é a mesma lógica, mas você precisa importar a classe Pilha antes de utilizá-la.
-
 ```text
 #pilha.py
-
-class Pilha:
-    def __init__(self):
-        self.__dados = []
-        
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
-    
-    def push(self, novoElem): 
-        self.__dados.append(novoElem)
-```
-
-```text
-#teste.py
 
 from pilha import Pilha 
 
