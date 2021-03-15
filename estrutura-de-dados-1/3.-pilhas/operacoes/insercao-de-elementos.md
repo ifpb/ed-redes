@@ -14,17 +14,16 @@ Em código, para adicionarmos um novo elemento devemos adicionar elementos na li
 
 ```text
 class Pilha:
-    def __init__(self):
-        self.topo = None
+  def __init__(self):
+    self.topo = None
 
-    #retorna True se for vazia
-    def is_empty(self):
-      return self.cabeca == None
-      
-    def push(self, novoElem): 
-        novo = No(novoElem)
-        novo.prox = self.topo
-        self.topo = novo
+  def is_empty(self):
+    return self.topo is None
+
+  def push(self, elemento):
+    no = No(elemento)
+    no.anterior = self.topo
+    self.topo = no
 ```
 
 Como devemos testar?

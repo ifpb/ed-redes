@@ -12,77 +12,25 @@ Em código, para remover um elemento da pilha devemos retirá-lo do topo sempre.
 
 ```text
 class Pilha:
-    def __init__(self):
-        self.__dados = []
-    
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
+  def __init__(self):
+    self.topo = None
 
-    def push(self, novoElem):
-        self.__dados.append(novoElem)
+  def is_empty(self):
+    return self.topo is None
 
-    def pop(self):
-        if self.is_empty():
-            return "Lista Vazia - Não houve Remoção"
-        return self.__dados.pop()
+  def push(self, elemento):
+    no = No(elemento)
+    no.anterior = self.topo
+    self.topo = no
+
+  def pop(self):
+    assert self.topo != None, "Impossível remover elemento de pilha vazia."
+    self.topo = self.topo.anterior
 ```
 
 Como testaremos?
 
-1\) No mesmo .py:
-
 ```text
-class Pilha:
-    def __init__(self):
-        self.__dados = []
-    
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
-    
-    def push(self, novoElem): 
-        self.__dados.append(novoElem)
-
-    def pop(self):
-        if self.is_empty():
-            return "Lista Vazia - Não houve Remoção"
-        return self.__dados.pop()
-
-def main():
-    pilhaTeste = Pilha()
-    pilha.push("elemento 1")
-    pilha.push("elemento 2")
-    pilha.pop()
-
-main()
-```
-
-2\) Utilizando dois arquivos .py
-
-```text
-#pilha.py
-
-class Pilha:
-    def __init__(self):
-        self.__dados = []
-        
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
-    
-    def push(self, novoElem): 
-        self.__dados.append(novoElem)
-
-    def pop(self):
-        if self.is_empty():
-            return "Lista Vazia - Não houve Remoção"
-        return self.__dados.pop()
-```
-
-```text
-#teste.py
-
 from pilha import Pilha
 
 def main():

@@ -8,106 +8,83 @@ Estamos adicionando e removendo elementos, mas ainda não conseguimos acompanhar
 
 Como tais funções devem ser implementadas. Neste caso, não há nomes fixos para esses métodos \(como o PUSH e POP\), mas eles devem ter nomes claros sobre isso.
 
-Para imprimir a pilha, basta implementar o método \_\_str\_\_ \(em alguns casos observamos o método getPilha também, mas entenderemos melhor a seguir\)
+Para imprimir a pilha, basta implementar o método `__repr__` \(recomendado para imprimir detalhes de um objeto\).
 
 ```text
+class No:
+  def __init__(self, carga=0, anterior=None):
+    self.carga = carga
+    self.anterior = anterior
+
+  def __repr__(self):
+    return '%s -> %s' % (self.carga, self.anterior)
+
 class Pilha:
-    def __init__(self):
-        self.__dados = []
+  def __init__(self):
+    self.topo = None
 
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
+  def is_empty(self):
+    return self.topo is None
 
-    def push(self, novoElem):
-        self.__dados.append(novoElem)
+  def push(self, elemento):
+    no = No(elemento)
+    no.anterior = self.topo
+    self.topo = no
 
-    def pop(self):
-        if self.is_empty():
-            return "Lista Vazia - Não houve Remoção"
-        return self.__dados.pop()
+  def pop(self):
+    assert self.topo != None, "Impossível remover elemento de pilha vazia."
+    self.topo = self.topo.anterior
 
-    def __str__(self):
-        return str(self.__dados)
+  def __repr__(self):
+    return "[" + str(self.topo) + "]"
 ```
 
 ## Verificar o topo da pilha
 
-Outra operação importante, é a verificação do topo da pilha. Faremos isso por meio do método topo:
+Outra operação importante, é a verificação do topo da pilha. Para isso basta acessar o atributo `topo` do objeto pilha.
+
+## Tamanho da Pilha
+
+Por fim, outra operação importante é a de verificação do tamanho da pilha. Faremos definindo um método `__len__` para a nossa estrutura encadeada.
 
 ```text
- def topo(self):
-        if self.is_empty():
-          return ("Pilha vazia")
-        else: 
-          return self.__dados[−1]
-```
-
-```text
-class Pilha:
-    def __init__(self):
-        self.__dados = []
-
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
-
-    def push(self, novoElem):
-        self.__dados.append(novoElem)
-
-    def pop(self):
-        if self.is_empty():
-            return "Lista Vazia - Não houve Remoção"
-        return self.__dados.pop()
-
-    def __str__(self):
-        return str(self.__dados)
-        
-    def topo(self):
-        if self.is_empty():
-          return ("Pilha vazia")
-        else: 
-          return self.__dados[−1]
-```
-
-## Tamanho da pilha
-
-Por fim, uma última operação importante é a de verificação do tamanho da pilha. Faremos isso com o auxílio da função len das listas em Python.
-
-```text
- def __len__(self): 
-      return len(self.__dados)
+  def __len__(self):
+    atual = self.topo
+    c = 0
+    while atual is not None:
+      c += 1
+      atual = atual.anterior
+    return c
 ```
 
 E nossa classe Pilha ficará assim:
 
 ```text
 class Pilha:
-    def __init__(self):
-        self.__dados = []
+  def __init__(self):
+    self.topo = None
 
-    #retorna True se for vazia
-    def is_empty(self):
-      return len(self.__dados) == 0
+  def is_empty(self):
+    return self.topo is None
 
-    def push(self, novoElem):
-        self.__dados.append(novoElem)
+  def push(self, elemento):
+    no = No(elemento)
+    no.anterior = self.topo
+    self.topo = no
 
-    def pop(self):
-        if self.is_empty():
-            return "Lista Vazia - Não houve Remoção"
-        return self.__dados.pop()
+  def pop(self):
+    assert self.topo != None, "Impossível remover elemento de pilha vazia."
+    self.topo = self.topo.anterior
 
-    def __str__(self):
-        return str(self.__dados)
-        
-    def topo(self):
-        if self.is_empty():
-          return ("Pilha vazia")
-        else: 
-          return self.__dados[−1]
-          
-    def __len__(self): 
-      return len(self.__dados)
+  def __repr__(self):
+    return "[" + str(self.topo) + "]"
+
+  def __len__(self):
+    atual = self.topo
+    c = 0
+    while atual is not None:
+      c += 1
+      atual = atual.anterior
+    return c
 ```
 
