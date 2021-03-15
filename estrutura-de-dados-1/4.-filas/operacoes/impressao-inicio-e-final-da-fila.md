@@ -16,7 +16,7 @@ class Fila:
     self.cabeca = cabeca
     self.cauda = cauda
 
-  def vazia(self):
+  def is_empty(self):
     return self.cabeca is None
 
   def __repr__(self):
