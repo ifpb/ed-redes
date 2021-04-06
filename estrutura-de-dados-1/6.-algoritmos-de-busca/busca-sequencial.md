@@ -38,7 +38,7 @@ Agora considere uma busca na mesma lista pela chave de busca **8**. Os elementos
 
 O método abaixo retornará o valor da posição do elemento com o valor pesquisado ou a posição de um elemento com o valor maior. O usuário deverá verificar se a posição retornada possui o valor pesquisado \(encontrou\) ou se possui um valor maior que o pesquisado \(não encontrou\).
 
-O algoritmo “busca\_sequencial” recebe como parâmetro a chave de pesquisa, um vetor a ser buscado e inicia um comando de repetição \(while\) com a condição de parada sendo até percorrer todo o vetor ou até a chave ser maior que o elemento consultado.
+O algoritmo “busca\_sequencial” recebe como parâmetro a chave de pesquisa, um vetor a ser buscado e inicia um comando de repetição \(for\) com a condição de parada sendo até percorrer todo o vetor ou até a chave ser maior que o elemento consultado.
 
 Note que caso o elemento exista, é retornada a posição dele no vetor, enquanto que caso ele não exista é retornado o valor **-1**, visto que 0 é uma posição válida da lista.
 
